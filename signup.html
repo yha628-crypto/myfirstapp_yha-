@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- signup-icon 클래스가 포함된 부모 컨테이너 없이 아이콘 컨테이너 다음에 바로 요소를 오게 하려면, CSS 형제 선택자(~) 구조를 맞추어야 합니다. -->
+    <div class="glass-container">
+        <!-- 회원가입 아이콘 -->
+        <div class="icon-container signup-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+        </div>
+
+        <h2>계정 만들기</h2>
+        <p class="subtitle">무료로 시작해보세요</p>
+
+        <form action="#" method="POST" class="auth-form" onsubmit="handleSignup(event)">
+            <div class="input-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" placeholder="홍길동" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password-confirm">비밀번호 확인</label>
+                <input type="password" id="password-confirm" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="submit-btn">가입하기</button>
+        </form>
+
+        <p class="switch-page">이미 계정이 있으신가요? <a onclick="goToLogin()" style="cursor: pointer;">로그인</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
