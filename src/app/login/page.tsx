@@ -27,9 +27,9 @@ export default function LoginPage() {
       var animationEnd = Date.now() + duration;
       var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
 
-      function randomInRange(min, max) {
+      const randomInRange = (min: number, max: number) => {
         return Math.random() * (max - min) + min;
-      }
+      };
 
       var interval = setInterval(function () {
         var timeLeft = animationEnd - Date.now();
